@@ -10,6 +10,7 @@ import TeamBalancerPage from './pages/TeamBalancerPage';
 import Navbar from './components/Navbar';
 import { Role } from './types';
 import SignupPage from './pages/SignupPage';
+import LeaderboardPage from './pages/LeaderboardPage';
 
 const App: React.FC = () => {
   return (
@@ -32,6 +33,7 @@ const Main: React.FC = () => {
           
           <Route path="/" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
           <Route path="/matches" element={<ProtectedRoute><MatchesPage /></ProtectedRoute>} />
+          <Route path="/leaderboard" element={<ProtectedRoute><LeaderboardPage /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
           <Route path="/team-balancer/:matchId" element={
             <ProtectedRoute requiredRole={Role.MANAGER}>

@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Role } from '../types';
-import { UsersIcon, CalendarIcon, UserCircleIcon, LogoutIcon } from './icons';
+import { UsersIcon, CalendarIcon, UserCircleIcon, LogoutIcon, ChartBarIcon } from './icons';
 
 const Navbar: React.FC = () => {
   const { user, logout } = useAuth();
@@ -38,6 +38,10 @@ const Navbar: React.FC = () => {
                 <NavLink to="/matches" className={navLinkClass}>
                   <CalendarIcon className="h-5 w-5 mr-2" />
                   Matches
+                </NavLink>
+                <NavLink to="/leaderboard" className={navLinkClass}>
+                    <ChartBarIcon className="h-5 w-5 mr-2" />
+                    Leaderboard
                 </NavLink>
                 <NavLink to="/profile" className={navLinkClass}>
                   <UserCircleIcon className="h-5 w-5 mr-2" />
